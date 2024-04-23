@@ -1,0 +1,13 @@
+<?php
+$conn = mysqli_connect('localhost', 'root');
+    if (mysqli_connect_error()) {
+    echo "koneksi ke sever gagal";
+    }
+$sql = "CREATE DATABASE db_kampus";
+    if (mysqli_query($conn, $sql)) {
+    echo "Database Berhasil dibuat";
+    } else {
+    echo "Gagal membuat Database :" . mysqli_error($conn);
+    }
+mysqli_close($conn);
+?>
